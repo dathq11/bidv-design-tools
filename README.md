@@ -50,8 +50,10 @@ pipeline sẽ lỗi ở **Bước 4A**:
 ```
 
 ### 2. Mobbin MCP (bước 4A bắt buộc tra pattern trước khi viết spec)
-Thêm MCP server `mobbin` vào cấu hình Claude Code (cần tài khoản/khóa Mobbin riêng).
-Nếu không có Mobbin, bước 4A sẽ không tra được reference pattern theo đúng quy trình.
+**Đã đi kèm plugin** (`.mcp.json`) — cài plugin là server `mobbin` tự đăng ký, không cần
+thêm tay. Lần đầu dùng, Claude Code sẽ yêu cầu **đăng nhập Mobbin qua OAuth**; mỗi thành
+viên dùng tài khoản Mobbin của riêng họ. Chưa login thì `claude mcp list` báo
+"Needs authentication" — chạy `/mcp` (hoặc gọi tool Mobbin lần đầu) để login.
 
 ---
 
