@@ -133,7 +133,7 @@ This step has two sequential sub-steps:
 
 **Reference gathering via Mobbin MCP (BẮT BUỘC — chạy TRƯỚC khi viết spec):**
 Khi lên concept cho màn hình/luồng, PHẢI kết nối **Mobbin MCP** để tham khảo các thiết kế thực tế tương tự trước khi quyết định layout và pattern:
-- Dùng `mcp__mobbin__search_screens`, `mcp__mobbin__search_flows`, và `mcp__mobbin__search_sections` (load schema qua `ToolSearch` với `select:` nếu các tool đang ở dạng deferred).
+- Dùng các tool Mobbin: `search_screens`, `search_flows`, `search_sections`. **Tên đầy đủ tuỳ cách cài**: cài qua plugin sẽ là `mcp__plugin_product-designer_mobbin__search_screens` (...flows/...sections), cài MCP trực tiếp sẽ là `mcp__mobbin__search_screens`. Nếu các tool đang ở dạng deferred, load schema bằng `ToolSearch` với query keyword `mobbin search` (khớp mọi prefix) hoặc `select:<tên-đầy-đủ>`.
 - Tìm theo loại màn hình/pattern liên quan đến sản phẩm (ví dụ: list + detail, dashboard, form wizard, directory, settings, onboarding...). Tra ít nhất 2–3 nhóm pattern khác nhau.
 - Rút ra các pattern UX/UI hay (cách bố cục, cách lọc/tìm kiếm, cách hiển thị dữ liệu, navigation, empty/error state) và **ghi rõ trong spec đã tham khảo từ màn hình/app nào** (kèm link Mobbin).
 - Các pattern tham khảo phải được "dịch" sang token & component của BIDV design system — KHÔNG bê nguyên visual của app khác. Mobbin chỉ để tham khảo bố cục & luồng, còn visual luôn tuân thủ `bidv-design`.

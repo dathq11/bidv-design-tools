@@ -1,7 +1,7 @@
 {
   "name": "product-designer",
   "description": "Pipeline thiết kế sản phẩm cho BIDV Back Office: project-strategy → research → ux-design → ui-design-spec → ui-generation. Gồm agent điều phối và 4 skill (project-strategy, research, ux-design, bidv-design).",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "author": {
     "name": "hoangdat"
   },
