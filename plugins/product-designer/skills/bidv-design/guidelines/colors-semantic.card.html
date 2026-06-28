@@ -1,0 +1,40 @@
+<!-- @dsCard group="Colors" viewport="700x180" name="Semantic — Status" subtitle="Negative / Notice / Positive / Informative · subtle fill + intermediate" -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; padding: 16px; background: var(--surface-high); }
+  .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .col .pair { display: flex; border-radius: var(--radius-8); overflow: hidden; box-shadow: var(--shadow-xs); }
+  .pair > div { height: 56px; flex: 1; }
+  .name { margin: 0 0 6px; color: var(--text-default); }
+  .hex { font-family: var(--font-mono); font-size: 10px; color: var(--text-low); margin-top: 6px; display: block; }
+</style>
+</head>
+<body>
+  <div class="grid">
+    <div class="col">
+      <p class="t-label-12 name">Negative</p>
+      <div class="pair"><div style="background:var(--red-50)"></div><div style="background:var(--red-500)"></div></div>
+      <span class="hex">#fae0e1 · #b21d22</span>
+    </div>
+    <div class="col">
+      <p class="t-label-12 name">Notice</p>
+      <div class="pair"><div style="background:var(--orange-50)"></div><div style="background:var(--orange-500)"></div></div>
+      <span class="hex">#ffeacc · #c27b17</span>
+    </div>
+    <div class="col">
+      <p class="t-label-12 name">Positive</p>
+      <div class="pair"><div style="background:var(--green-50)"></div><div style="background:var(--green-500)"></div></div>
+      <span class="hex">#d7f3e4 · #0d8445</span>
+    </div>
+    <div class="col">
+      <p class="t-label-12 name">Informative</p>
+      <div class="pair"><div style="background:var(--blue-50)"></div><div style="background:var(--blue-500)"></div></div>
+      <span class="hex">#d7e6f3 · #0d4d84</span>
+    </div>
+  </div>
+</body>
+</html>

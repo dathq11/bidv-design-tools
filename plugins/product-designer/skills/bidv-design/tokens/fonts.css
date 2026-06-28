@@ -1,0 +1,10 @@
+/* ============================================================
+   BIDV Back Office — Webfonts
+   Roboto served from Google Fonts (weights 400 / 500 / 600).
+   NOTE: Self-hosted .woff2 binaries are preferred for offline /
+   production use — see readme.md "Fonts" caveat. Swap this @import
+   for local @font-face rules once the binaries are added under
+   assets/fonts/.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&family=Roboto+Mono:wght@400;500&display=swap');

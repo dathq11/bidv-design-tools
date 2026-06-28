@@ -1,0 +1,25 @@
+<!-- @dsCard group="Spacing" viewport="700x190" name="Elevation / Shadow" subtitle="xs → 2xl · soft ambient + directional drop" -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; padding: 28px 24px; background: var(--surface-default); }
+  .scale { display: flex; align-items: center; gap: 26px; }
+  .item { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+  .box { width: 84px; height: 64px; background: var(--surface-high); border-radius: var(--radius-12); }
+  .lbl { font-family: var(--font-mono); font-size: 11px; color: var(--text-low); }
+</style>
+</head>
+<body>
+  <div class="scale">
+    <div class="item"><div class="box" style="box-shadow:var(--shadow-xs)"></div><span class="lbl">xs</span></div>
+    <div class="item"><div class="box" style="box-shadow:var(--shadow-sm)"></div><span class="lbl">sm</span></div>
+    <div class="item"><div class="box" style="box-shadow:var(--shadow-md)"></div><span class="lbl">md</span></div>
+    <div class="item"><div class="box" style="box-shadow:var(--shadow-lg)"></div><span class="lbl">lg</span></div>
+    <div class="item"><div class="box" style="box-shadow:var(--shadow-xl)"></div><span class="lbl">xl</span></div>
+    <div class="item"><div class="box" style="box-shadow:var(--shadow-2xl)"></div><span class="lbl">2xl</span></div>
+  </div>
+</body>
+</html>

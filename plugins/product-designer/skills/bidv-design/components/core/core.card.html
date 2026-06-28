@@ -1,0 +1,85 @@
+<!-- @dsCard group="Components" viewport="700x340" name="Core — Buttons, Badges, Avatars" subtitle="Button · IconButton · Badge · Tag · Avatar · Card" -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://cdn.jsdelivr.net/npm/iconify-icon@2/dist/iconify-icon.min.js"></script>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>
+  body { margin: 0; padding: 20px; background: var(--surface-default); }
+  .grid { display: flex; flex-direction: column; gap: 16px; }
+  .row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .panel { background: var(--surface-high); border: 1px solid var(--border-subtle); border-radius: var(--radius-12); padding: 16px; }
+  .lbl { font-size: 11px; font-weight: 600; letter-spacing: .4px; text-transform: uppercase; color: var(--text-lowest); margin-bottom: 10px; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+const { Button, IconButton, Badge, Tag, Avatar, Card } = window.BIDVBackOfficeDesignSystem_478bc4;
+function Demo() {
+  return (
+    <div className="grid">
+      <div className="panel">
+        <div className="lbl">Button — variant × color × size</div>
+        <div className="row" style={{marginBottom:10}}>
+          <Button color="primary" iconLeft="add">Tạo lệnh</Button>
+          <Button variant="outline" color="gray">Hủy</Button>
+          <Button variant="transparent" color="primary" iconLeft="download">Xuất Excel</Button>
+          <Button color="negative" iconLeft="delete">Xóa</Button>
+          <Button disabled>Disabled</Button>
+        </div>
+        <div className="row">
+          <Button size="L">Large</Button>
+          <Button size="M">Medium</Button>
+          <Button size="S">Small</Button>
+          <Button variant="outline" color="gray" size="S" iconLeft="filter">Lọc</Button>
+        </div>
+      </div>
+      <div className="row">
+        <div className="panel" style={{flex:1}}>
+          <div className="lbl">IconButton</div>
+          <div className="row">
+            <IconButton icon="edit" ariaLabel="Sửa" />
+            <IconButton icon="copy" ariaLabel="Sao chép" />
+            <IconButton icon="alert" badge={3} ariaLabel="Thông báo" />
+            <IconButton icon="delete" color="negative" ariaLabel="Xóa" />
+            <IconButton icon="more-horizontal" variant="filled" ariaLabel="Khác" />
+          </div>
+        </div>
+        <div className="panel" style={{flex:1}}>
+          <div className="lbl">Avatar</div>
+          <div className="row">
+            <Avatar name="Nguyễn Văn An" presence="online" />
+            <Avatar name="Trần Thị Bình" />
+            <Avatar name="Lê Minh Cường" size="lg" />
+            <Avatar name="BIDV Hà Nội" square />
+          </div>
+        </div>
+      </div>
+      <div className="panel">
+        <div className="lbl">Badge & Tag</div>
+        <div className="row" style={{marginBottom:10}}>
+          <Badge tone="positive" dot>Thành công</Badge>
+          <Badge tone="notice" dot>Đang xử lý</Badge>
+          <Badge tone="negative" dot>Từ chối</Badge>
+          <Badge tone="informative" dot>Chờ duyệt</Badge>
+          <Badge tone="primary" variant="solid">Mới</Badge>
+        </div>
+        <div className="row">
+          <Tag icon="filter" onDismiss={()=>{}}>Trạng thái: Thành công</Tag>
+          <Tag selected>Chi nhánh Hà Nội</Tag>
+          <Tag onDismiss={()=>{}}>01/06 – 24/06/2026</Tag>
+        </div>
+      </div>
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script>
+</body>
+</html>

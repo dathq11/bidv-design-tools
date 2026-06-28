@@ -1,0 +1,72 @@
+<!-- @dsCard group="Components" viewport="700x340" name="Feedback — Dialog, Toast, Tooltip" subtitle="Dialog · Toast · Tooltip" -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://cdn.jsdelivr.net/npm/iconify-icon@2/dist/iconify-icon.min.js"></script>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>
+  body { margin: 0; padding: 20px; background: var(--surface-default); }
+  .wrap { display: grid; grid-template-columns: 1.1fr 1fr; gap: 16px; align-items: start; }
+  .panel { background: var(--surface-high); border: 1px solid var(--border-subtle); border-radius: var(--radius-12); padding: 16px; }
+  .lbl { font-size: 11px; font-weight: 600; letter-spacing: .4px; text-transform: uppercase; color: var(--text-lowest); margin-bottom: 12px; }
+  .row { display:flex; gap:12px; align-items:center; }
+  /* render dialog inline (not fixed) for the card */
+  .inlineDialog [role=dialog]{ box-shadow: var(--shadow-lg); }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+const { Toast, ToastStack, Tooltip, IconButton, Button, Dialog } = window.BIDVBackOfficeDesignSystem_478bc4;
+function Demo() {
+  return (
+    <div className="wrap">
+      <div className="panel">
+        <div className="lbl">Toast</div>
+        <div style={{display:'flex',flexDirection:'column',gap:10}}>
+          <Toast tone="positive" title="Đã duyệt lệnh" message="Lệnh GD0012 đã được phê duyệt thành công." onClose={()=>{}} />
+          <Toast tone="negative" title="Giao dịch thất bại" message="Số dư tài khoản không đủ." onClose={()=>{}} />
+          <Toast tone="informative" title="Phiên sắp hết hạn" message="Bạn sẽ được đăng xuất sau 2 phút." onClose={()=>{}} />
+        </div>
+      </div>
+      <div style={{display:'flex',flexDirection:'column',gap:16}}>
+        <div className="panel">
+          <div className="lbl">Tooltip</div>
+          <div className="row">
+            <Tooltip label="Sửa lệnh"><IconButton icon="edit" ariaLabel="Sửa" /></Tooltip>
+            <Tooltip label="Xuất Excel"><IconButton icon="download" ariaLabel="Xuất" /></Tooltip>
+            <Tooltip label="Xóa lệnh" placement="bottom"><IconButton icon="delete" color="negative" ariaLabel="Xóa" /></Tooltip>
+          </div>
+        </div>
+        <div className="panel inlineDialog">
+          <div className="lbl">Dialog</div>
+          <div style={{position:'relative',height:200,background:'var(--gray-50)',borderRadius:8,overflow:'hidden'}}>
+            <div style={{position:'absolute',inset:0,display:'flex',alignItems:'center',justifyContent:'center'}}>
+              <div style={{width:340,background:'var(--surface-high)',borderRadius:'var(--radius-card)',boxShadow:'var(--shadow-lg)',overflow:'hidden'}}>
+                <div style={{display:'flex',gap:10,padding:'14px 14px 8px 16px'}}>
+                  <span style={{width:32,height:32,borderRadius:8,background:'var(--red-50)',color:'var(--red-500)',display:'inline-flex',alignItems:'center',justifyContent:'center'}}><iconify-icon icon="fluent:warning-24-regular" width="18"></iconify-icon></span>
+                  <div style={{flex:1,fontSize:15,fontWeight:600,color:'var(--text-default)',paddingTop:5}}>Xác nhận hủy lệnh</div>
+                  <iconify-icon icon="fluent:dismiss-24-regular" width="18" style={{color:'var(--fg-low)',marginTop:6}}></iconify-icon>
+                </div>
+                <div style={{padding:'0 16px 12px',fontSize:13,color:'var(--text-low)'}}>Hành động này không thể hoàn tác.</div>
+                <div style={{display:'flex',justifyContent:'flex-end',gap:8,padding:12,borderTop:'1px solid var(--border-subtle)'}}>
+                  <Button variant="outline" color="gray" size="S">Quay lại</Button>
+                  <Button color="negative" size="S">Hủy lệnh</Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script>
+</body>
+</html>

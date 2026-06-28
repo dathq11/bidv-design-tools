@@ -1,0 +1,25 @@
+<!-- @dsCard group="Spacing" viewport="700x150" name="Spacing Scale" subtitle="6 · 8 · 16 · 32 · 40 · 80 — 8px-based rhythm" -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; padding: 20px 24px; background: var(--surface-high); }
+  .scale { display: flex; align-items: flex-end; gap: 20px; }
+  .item { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .bar { background: var(--primary-200); border-radius: var(--radius-4); }
+  .lbl { font-family: var(--font-mono); font-size: 11px; color: var(--text-low); }
+</style>
+</head>
+<body>
+  <div class="scale">
+    <div class="item"><div class="bar" style="width:6px;height:6px"></div><span class="lbl">6</span></div>
+    <div class="item"><div class="bar" style="width:8px;height:8px"></div><span class="lbl">8</span></div>
+    <div class="item"><div class="bar" style="width:16px;height:16px"></div><span class="lbl">16</span></div>
+    <div class="item"><div class="bar" style="width:32px;height:32px"></div><span class="lbl">32</span></div>
+    <div class="item"><div class="bar" style="width:40px;height:40px"></div><span class="lbl">40</span></div>
+    <div class="item"><div class="bar" style="width:80px;height:80px"></div><span class="lbl">80</span></div>
+  </div>
+</body>
+</html>

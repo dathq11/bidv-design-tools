@@ -1,0 +1,195 @@
+/* ============================================================
+   BIDV Back Office — Color Tokens
+   Primitive palettes + semantic aliases (Light mode)
+   ============================================================ */
+
+:root {
+  /* ---------- Base ---------- */
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* ---------- Primary (Teal) ---------- */
+  --primary-50:  #d7f3f2;
+  --primary-100: #b2e7e5;
+  --primary-200: #75cecb;
+  --primary-400: #249d99;
+  --primary-500: #0d8480;
+  --primary-600: #006b68;
+  --primary-700: #00514e;
+  --primary-800: #003634;
+  --primary-900: #001b1a;
+  --primary-950: #000e0e;
+
+  /* ---------- Secondary (Amber / BIDV gold) ---------- */
+  --secondary-50:  #fff6d5;
+  --secondary-100: #ffeda9;
+  --secondary-200: #ffd05e;
+  --secondary-300: #ffb71b;
+  --secondary-400: #db9705;
+  --secondary-500: #b67d00;
+  --secondary-600: #926400;
+  --secondary-700: #6d4b00;
+  --secondary-800: #493200;
+  --secondary-900: #2d1f00;
+  --secondary-950: #241a00;
+
+  /* ---------- Red ---------- */
+  --red-50:  #fae0e1;
+  --red-100: #f6c2c4;
+  --red-200: #ec8d90;
+  --red-300: #de5e63;
+  --red-400: #cb393e;
+  --red-500: #b21d22;
+  --red-600: #920a0f;
+  --red-700: #6b0004;
+  --red-800: #460002;
+  --red-900: #1f0001;
+  --red-950: #100001;
+
+  /* ---------- Orange ---------- */
+  --orange-50:  #ffeacc;
+  --orange-100: #ffddad;
+  --orange-200: #fcce8b;
+  --orange-300: #f3b258;
+  --orange-400: #e99b2f;
+  --orange-500: #c27b17;
+  --orange-600: #9b5e09;
+  --orange-700: #754502;
+  --orange-800: #4e2e00;
+  --orange-900: #271700;
+  --orange-950: #140c00;
+
+  /* ---------- Green ---------- */
+  --green-50:  #d7f3e4;
+  --green-100: #b2e7cb;
+  --green-200: #75ce9f;
+  --green-300: #46b57a;
+  --green-400: #249d5c;
+  --green-500: #0d8445;
+  --green-600: #006b32;
+  --green-700: #005126;
+  --green-800: #003619;
+  --green-900: #001b0d;
+  --green-950: #000e07;
+
+  /* ---------- Blue ---------- */
+  --blue-50:  #d7e6f3;
+  --blue-100: #b2cee7;
+  --blue-200: #75a5ce;
+  --blue-300: #4681b5;
+  --blue-400: #24649d;
+  --blue-500: #0d4d84;
+  --blue-600: #00396b;
+  --blue-700: #002b51;
+  --blue-800: #001d36;
+  --blue-900: #000e1b;
+  --blue-950: #00070e;
+
+  /* ---------- Gray (neutral, pure) ---------- */
+  --gray-50:  #f5f5f5;
+  --gray-100: #e5e5e5;
+  --gray-200: #cccccc;
+  --gray-300: #b3b3b3;
+  --gray-400: #999999;
+  --gray-500: #808080;
+  --gray-600: #666666;
+  --gray-700: #4f4f4f;
+  --gray-800: #333333;
+  --gray-900: #262626;
+  --gray-950: #141414;
+
+  /* ---------- Neutrals (teal-tinted gray) ---------- */
+  --neutral-50:  #ebf5f4;
+  --neutral-100: #d7e5e5;
+  --neutral-200: #bccccb;
+  --neutral-300: #9eb3b2;
+  --neutral-400: #849998;
+  --neutral-500: #6c807d;
+  --neutral-600: #546664;
+  --neutral-700: #3c4a4a;
+  --neutral-800: #24302e;
+  --neutral-900: #0b1816;
+  --neutral-950: #030c0b;
+
+  /* ---------- Transparent black/white ---------- */
+  --black-a05: rgba(0,0,0,0.05);
+  --black-a10: rgba(0,0,0,0.10);
+  --black-a20: rgba(0,0,0,0.20);
+  --black-a30: rgba(0,0,0,0.30);
+  --black-a50: rgba(0,0,0,0.50);
+  --white-a10: rgba(255,255,255,0.10);
+  --white-a20: rgba(255,255,255,0.20);
+  --white-a80: rgba(255,255,255,0.80);
+
+  /* ============================================================
+     SEMANTIC ALIASES (Light mode)
+     ============================================================ */
+
+  /* ----- Surface / Background ----- */
+  --surface-high:        var(--color-white);   /* cards, sheets */
+  --surface-default:     var(--gray-50);        /* page canvas */
+  --surface-low:         var(--gray-100);
+  --surface-lowest:      var(--gray-200);
+  --surface-intermediate:var(--gray-500);
+  --surface-inverse:     var(--gray-800);
+  --surface-on-default:        var(--black-a05); /* subtle hover fill */
+  --surface-on-default-low:    var(--black-a10);
+  --surface-on-default-lowest: var(--black-a20);
+  --surface-overlay:     var(--black-a30);       /* modal scrim */
+  --surface-disabled:    var(--black-a10);
+
+  /* ----- Brand surfaces ----- */
+  --surface-brand-subtle:       var(--primary-50);
+  --surface-brand-highest:      var(--primary-100);
+  --surface-brand-high:         var(--primary-200);
+  --surface-brand-intermediate: var(--primary-500); /* primary CTA */
+  --surface-brand-inverse:      var(--primary-400);
+  --surface-brand-low:          var(--primary-600);
+  --surface-brand-secondary-subtle:  var(--secondary-50);
+  --surface-brand-secondary-highest: var(--secondary-100);
+  --surface-brand-secondary:         var(--secondary-300);
+
+  /* ----- Semantic surfaces ----- */
+  --surface-negative-subtle:       var(--red-50);
+  --surface-negative-intermediate: var(--red-500);
+  --surface-notice-subtle:         var(--orange-50);
+  --surface-notice-intermediate:   var(--orange-500);
+  --surface-positive-subtle:       var(--green-50);
+  --surface-positive-intermediate: var(--green-500);
+  --surface-informative-subtle:    var(--blue-50);
+  --surface-informative-intermediate: var(--blue-500);
+
+  /* ----- Text ----- */
+  --text-default:  var(--gray-800);   /* #333 body / heading */
+  --text-low:      var(--gray-600);   /* #666 secondary */
+  --text-lowest:   var(--gray-400);   /* #999 placeholder */
+  --text-inverse:  var(--color-white);
+  --text-disabled: var(--black-a30);
+  --text-brand:    var(--primary-600);
+  --text-brand-inverse: var(--primary-400);
+  --text-negative:    var(--red-500);
+  --text-notice:      var(--orange-500);
+  --text-positive:    var(--green-500);
+  --text-informative: var(--blue-500);
+
+  /* ----- Foreground (icons) ----- */
+  --fg-default: var(--gray-800);
+  --fg-low:     var(--gray-600);
+  --fg-inverse: var(--color-white);
+  --fg-brand:   var(--primary-600);
+  --fg-negative:    var(--red-500);
+  --fg-positive:    var(--green-500);
+  --fg-notice:      var(--orange-500);
+  --fg-informative: var(--blue-500);
+
+  /* ----- Border ----- */
+  --border-default:  var(--black-a20);
+  --border-subtle:   var(--gray-100);
+  --border-subtlest: var(--gray-50);
+  --border-active:   var(--primary-600);
+  --border-error:    var(--red-500);
+  --border-warning:  var(--orange-500);
+  --border-success:  var(--green-500);
+  --border-informative: var(--blue-500);
+  --border-disabled: var(--black-a10);
+}

@@ -1,0 +1,17 @@
+import * as React from 'react';
+
+export interface CheckboxProps {
+  checked?: boolean;
+  indeterminate?: boolean;
+  onChange?: (checked: boolean) => void;
+  label?: React.ReactNode;
+  disabled?: boolean;
+  style?: React.CSSProperties;
+}
+
+/**
+ * Boolean checkbox with label and indeterminate state.
+ *
+ * @dsCard group="Components"
+ */
+export function Checkbox(props: CheckboxProps): JSX.Element;

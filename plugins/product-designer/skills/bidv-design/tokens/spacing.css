@@ -1,0 +1,58 @@
+/* ============================================================
+   BIDV Back Office — Spacing, Radius, Shadow, Layout tokens
+   ============================================================ */
+
+:root {
+  /* ---------- Spacing scale (px) ---------- */
+  --space-0:  0px;
+  --space-2:  2px;
+  --space-4:  4px;
+  --space-6:  6px;
+  --space-8:  8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-40: 40px;
+  --space-48: 48px;
+  --space-64: 64px;
+  --space-80: 80px;
+
+  /* ---------- Corner radius (px) ---------- */
+  --radius-0:    0px;
+  --radius-4:    4px;
+  --radius-8:    8px;
+  --radius-12:   12px;
+  --radius-16:   16px;
+  --radius-24:   24px;
+  --radius-full: 9999px;
+
+  /* Semantic radius aliases */
+  --radius-control: var(--radius-8);   /* buttons, inputs */
+  --radius-card:    var(--radius-12);  /* cards, panels */
+  --radius-pill:    var(--radius-full);
+
+  /* ---------- Drop shadows ---------- */
+  --shadow-xs: 0 0 4px rgba(0,0,0,0.04), 0 2px 8px -1px rgba(0,0,0,0.10);
+  --shadow-sm: 0 0 4px rgba(0,0,0,0.04), 0 4px 12px -2px rgba(0,0,0,0.10);
+  --shadow-md: 0 0 8px rgba(0,0,0,0.04), 0 8px 16px -2px rgba(0,0,0,0.10);
+  --shadow-lg: 0 0 12px rgba(0,0,0,0.04), 0 16px 24px -4px rgba(0,0,0,0.12);
+  --shadow-xl: 0 0 16px rgba(0,0,0,0.04), 0 24px 48px -8px rgba(0,0,0,0.16);
+  --shadow-2xl: 0 0 24px rgba(0,0,0,0.04), 0 32px 64px -8px rgba(0,0,0,0.20);
+
+  /* Focus ring */
+  --focus-ring: 0 0 0 3px rgba(0,107,104,0.25);
+
+  /* ---------- Layout ---------- */
+  --layout-sidebar-w: 248px;
+  --layout-sidebar-collapsed-w: 64px;
+  --layout-topnav-h: 56px;
+  --layout-page-max: 1440px;
+
+  /* ---------- Motion ---------- */
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);   /* @kind other */
+  --ease-emphasized: cubic-bezier(0.3, 0, 0, 1); /* @kind other */
+  --dur-fast: 120ms; /* @kind other */
+  --dur-base: 180ms; /* @kind other */
+  --dur-slow: 260ms; /* @kind other */
+}

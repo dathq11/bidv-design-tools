@@ -1,0 +1,19 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "bidv-design-tools",
+  "description": "Marketplace nội bộ cho bộ công cụ thiết kế sản phẩm BIDV Back Office.",
+  "owner": {
+    "name": "hoangdat"
+  },
+  "plugins": [
+    {
+      "name": "product-designer",
+      "description": "Agent điều phối pipeline tạo tài liệu sản phẩm (strategy → research → ux → ui spec → ui gen) trên BIDV Back Office Design System.",
+      "author": {
+        "name": "hoangdat"
+      },
+      "category": "design",
+      "source": "./plugins/product-designer"
+    }
+  ]
+}

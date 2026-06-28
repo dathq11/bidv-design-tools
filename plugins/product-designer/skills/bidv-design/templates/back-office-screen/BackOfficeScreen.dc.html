@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Back Office Screen" description="BIDV back-office app shell: sidebar + top bar + page header + content area, ready to fill" -->
+<helmet>
+  <script src="./ds-base.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/iconify-icon@2/dist/iconify-icon.min.js"></script>
+  <style>
+    html, body { height: 100%; margin: 0; background: #f5f5f5; }
+  </style>
+</helmet>
+<div style="display:flex; height:100vh; overflow:hidden; font-family:'Roboto', sans-serif; background:#f5f5f5;">
+
+  <x-import component-from-global-scope="BIDVBackOfficeDesignSystem_478bc4.Sidebar"
+    items="{{ navItems }}" active="dashboard"
+    logo-src="../../assets/bidv-logo-onteal.svg" mark-src="../../assets/bidv-mark.svg"
+    hint-size="248px,100%"></x-import>
+
+  <div style="flex:1; min-width:0; display:flex; flex-direction:column;">
+
+    <x-import component-from-global-scope="BIDVBackOfficeDesignSystem_478bc4.TopNav"
+      notifications="5" user="{{ user }}"
+      hint-size="100%,56px"></x-import>
+
+    <main style="flex:1; overflow-y:auto; padding:24px;">
+      <div style="max-width:1280px; margin:0 auto; display:flex; flex-direction:column; gap:16px;">
+
+        <x-import component-from-global-scope="BIDVBackOfficeDesignSystem_478bc4.PageHeader"
+          title="Tổng quan" subtitle="Bảng điều khiển vận hành"
+          breadcrumb="{{ breadcrumb }}"
+          hint-size="100%,72px"></x-import>
+
+        <div style="background:#ffffff; border:1px solid #e5e5e5; border-radius:12px; padding:40px; min-height:280px; display:flex; align-items:center; justify-content:center; text-align:center;">
+          <div style="display:flex; flex-direction:column; align-items:center; gap:8px; color:#999999;">
+            <iconify-icon icon="fluent:layout-column-two-24-regular" width="28"></iconify-icon>
+            <div style="font-size:15px; font-weight:500; color:#666666;">Khu vực nội dung</div>
+            <div style="font-size:13px;">Đặt bảng dữ liệu, biểu mẫu hoặc thẻ thống kê ở đây.</div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      navItems: [
+        { id: 'dashboard', label: 'Tổng quan', icon: 'home' },
+        { id: 'transactions', label: 'Giao dịch', icon: 'arrow-swap', badge: 27 },
+        { id: 'accounts', label: 'Tài khoản', icon: 'wallet' },
+        { id: 'customers', label: 'Khách hàng', icon: 'people' },
+        { id: 'reports', label: 'Báo cáo', icon: 'data-bar' },
+        { id: 'settings', label: 'Cấu hình', icon: 'settings' },
+      ],
+      user: { name: 'Nguyễn Văn An', role: 'Giao dịch viên · CN Hà Nội' },
+      breadcrumb: [
+        { label: 'Trang chủ', href: '#' },
+        { label: 'Tổng quan' },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

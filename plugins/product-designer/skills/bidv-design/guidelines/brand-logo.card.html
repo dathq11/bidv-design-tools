@@ -1,0 +1,26 @@
+<!-- @dsCard group="Brand" viewport="700x200" name="Logo" subtitle="Full wordmark · teal #006B68 + flower gold #FFB71B" -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; }
+  .panel { display: flex; align-items: center; justify-content: center; gap: 20px; padding: 32px; }
+  .light { background: var(--surface-high); }
+  .dark { background: var(--primary-600); }
+  .light img { height: 44px; }
+  .dark img.word { height: 36px; filter: brightness(0) invert(1); }
+  .dark img.mark { height: 44px; }
+</style>
+</head>
+<body>
+  <div class="panel light">
+    <img src="../assets/bidv-logo-full.svg" alt="BIDV">
+  </div>
+  <div class="panel dark">
+    <img class="word" src="../assets/bidv-logo-full.svg" alt="BIDV reversed">
+    <img class="mark" src="../assets/bidv-mark.svg" alt="BIDV mark">
+  </div>
+</body>
+</html>

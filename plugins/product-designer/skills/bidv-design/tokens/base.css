@@ -1,0 +1,31 @@
+/* ============================================================
+   BIDV Back Office — Base resets & element defaults
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--fs-body-14);
+  line-height: var(--lh-body-14);
+  color: var(--text-default);
+  background: var(--surface-default);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button, input, select, textarea { font: inherit; color: inherit; }
+
+a { color: var(--text-brand); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+::selection { background: var(--primary-100); color: var(--primary-800); }
+
+/* Thin neutral scrollbars to match the dense back-office feel */
+* { scrollbar-width: thin; scrollbar-color: var(--gray-300) transparent; }
+*::-webkit-scrollbar { width: 10px; height: 10px; }
+*::-webkit-scrollbar-thumb { background: var(--gray-300); border-radius: var(--radius-full); border: 2px solid transparent; background-clip: content-box; }
+*::-webkit-scrollbar-thumb:hover { background: var(--gray-400); background-clip: content-box; }

@@ -1,0 +1,44 @@
+<!-- @dsCard group="Colors" viewport="700x230" name="Neutrals — Gray & Teal-tinted" subtitle="Pure gray for UI chrome · teal-tinted neutral for brand surfaces" -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; padding: 16px; background: var(--surface-high); }
+  .grp { margin-bottom: 14px; }
+  .row { display: flex; gap: 0; border-radius: var(--radius-8); overflow: hidden; box-shadow: var(--shadow-xs); }
+  .sw { flex: 1; height: 64px; display: flex; flex-direction: column; justify-content: flex-end; padding: 6px; }
+  .sw span { font-family: var(--font-mono); font-size: 10px; }
+  .lt { color: var(--gray-800); }
+  .dk { color: rgba(255,255,255,0.92); }
+  .cap { margin: 0 0 8px; color: var(--text-low); }
+</style>
+</head>
+<body>
+  <div class="grp">
+    <p class="t-label-12 cap">Colors / Gray (UI chrome)</p>
+    <div class="row">
+      <div class="sw" style="background:var(--gray-50)"><span class="lt">50</span></div>
+      <div class="sw" style="background:var(--gray-100)"><span class="lt">100</span></div>
+      <div class="sw" style="background:var(--gray-200)"><span class="lt">200</span></div>
+      <div class="sw" style="background:var(--gray-400)"><span class="dk">400</span></div>
+      <div class="sw" style="background:var(--gray-600)"><span class="dk">600</span></div>
+      <div class="sw" style="background:var(--gray-800)"><span class="dk">800</span></div>
+      <div class="sw" style="background:var(--gray-950)"><span class="dk">950</span></div>
+    </div>
+  </div>
+  <div class="grp">
+    <p class="t-label-12 cap">Colors / Neutrals (teal-tinted)</p>
+    <div class="row">
+      <div class="sw" style="background:var(--neutral-50)"><span class="lt">50</span></div>
+      <div class="sw" style="background:var(--neutral-100)"><span class="lt">100</span></div>
+      <div class="sw" style="background:var(--neutral-200)"><span class="lt">200</span></div>
+      <div class="sw" style="background:var(--neutral-400)"><span class="dk">400</span></div>
+      <div class="sw" style="background:var(--neutral-600)"><span class="dk">600</span></div>
+      <div class="sw" style="background:var(--neutral-800)"><span class="dk">800</span></div>
+      <div class="sw" style="background:var(--neutral-950)"><span class="dk">950</span></div>
+    </div>
+  </div>
+</body>
+</html>
